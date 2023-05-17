@@ -1,0 +1,56 @@
+###
+GET http://localhost:3030/activity-groups
+
+###
+GET http://localhost:3030/activity-groups/3
+
+###
+POST http://localhost:3030/activity-groups
+Content-Type: application/json
+
+{
+    "title": "auto",
+    "email": "test@mail.com"
+}
+
+###
+PUT http://localhost:3030/activity-groups/4
+Content-Type: application/json
+
+{
+    "title": "updated",
+    "email": "test@mail.com"
+}
+
+###
+DELETE http://localhost:3030/activity-groups/1
+
+###
+GET http://localhost:3030/todo-items
+
+###
+GET http://localhost:3030/todo-items/3
+
+###
+POST http://localhost:3030/todo-items
+Content-Type: application/json
+
+{
+    "title": "item 2",
+    "activity_group_id": 1,
+    "is_active": true
+}
+
+###
+PUT http://localhost:3030/todo-items/5
+Content-Type: application/json
+
+{
+    "title": "item 2",
+    "activity_group_id": 1,
+    "is_active": true,
+    "priority": "very-high"
+}
+
+###
+DELETE http://localhost:3030/todo-items/4
